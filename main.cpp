@@ -12,10 +12,50 @@ void showMenu() {
     std::cout << "0. Exit\n";
     std::cout << "Choose an option: ";
 }
-
-int main() {
     Library library;
     int choice;
+
+void addBook() {
+    library.addBook();
+}
+
+void listBooks() {
+    library.listBooks();
+}
+
+void registerUser() {
+    library.registerUser();
+}
+
+void listUsers() {
+    library.listUsers();
+}
+
+void borrowBook() {
+    if (!library.checkBookQuantity() || !library.checkUserQuantity()) {
+        return;
+    }
+        int userId, bookId;
+        std::cout << "Enter User ID: ";
+        std::cin >> userId;
+        std::cout << "Enter Book ID: ";
+        std::cin >> bookId;
+        library.borrowBook(userId, bookId);
+}
+
+void returnBook() {
+    if (!library.checkBookQuantity() || !library.checkUserQuantity()) {
+        return;
+    }
+    int userId, bookId;
+    std::cout << "Enter User ID: ";
+    std::cin >> userId;
+    std::cout << "Enter Book ID: ";
+    std::cin >> bookId;
+    library.returnBook(userId, bookId);
+}
+
+int main() {
 
     do {
         showMenu();
@@ -24,33 +64,23 @@ int main() {
 
         switch (choice) {
             case 1:
-                library.addBook();
+                addBook();
                 break;
             case 2:
-                library.listBooks();
+                listBooks();
                 break;
             case 3:
-                library.registerUser();
+                registerUser();
                 break;
             case 4:
-                library.listUsers();
+                listUsers();
                 break;
             case 5: {
-                int userId, bookId;
-                std::cout << "Enter User ID: ";
-                std::cin >> userId;
-                std::cout << "Enter Book ID: ";
-                std::cin >> bookId;
-                library.borrowBook(userId, bookId);
+                borrowBook();
                 break;
             }
             case 6: {
-                int userId, bookId;
-                std::cout << "Enter User ID: ";
-                std::cin >> userId;
-                std::cout << "Enter Book ID: ";
-                std::cin >> bookId;
-                library.returnBook(userId, bookId);
+                returnBook();
                 break;
             }
             case 0:

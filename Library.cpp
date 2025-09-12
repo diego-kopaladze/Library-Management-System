@@ -6,7 +6,11 @@ void Library::addBook() {
     std::string title, author;
 
     std::cout << "Enter ID of book (integer): ";
-    std::cin >> id;
+    while (!(std::cin >> id)) {
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+        std::cout << "Invalid input. Enter an integer: ";
+    }
     std::cin.ignore();
 
     std::cout << "Title of book: ";
@@ -52,7 +56,11 @@ void Library::registerUser() {
     std::string nameOfUser;
 
     std::cout << "Enter ID of user: ";
-    std::cin >> idOfUser;
+    while (!(std::cin >> idOfUser)) {
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+        std::cout << "Invalid input. Enter an integer: ";
+    }
     std::cin.ignore();
 
     std::cout << "Enter user's name: ";
@@ -159,3 +167,20 @@ void Library::returnBook(int userId, int bookId) {
 
     std::cout << "Book returned successfully.\n";
 }
+
+bool Library::checkBookQuantity() {
+    if (books.empty()) {
+        std::cout << "No books in the library.\n";
+        return false;
+    }
+    return true;
+}
+
+bool Library::checkUserQuantity() {
+    if (users.empty()) {
+        std::cout << "No users in the library.\n";
+        return false;
+    }
+    return true;
+}
+

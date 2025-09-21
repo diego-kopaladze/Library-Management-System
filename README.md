@@ -124,21 +124,3 @@ Run the executable (from `build` or wherever it is). The console prompts will al
 * Exit the program
 
 ---
-
-## Future Improvements
-
-Here are some ideas if you want to expand:
-
-* Persistent storage (save books/users between runs), e.g. file or database
-* More detailed user permissions (admin vs normal user)
-* GUI or web frontend
-* More search/filter options (by author, genre, etc.)
-* Improved error handling, input validation
-* Unit tests / automated tests
-* Multi-threading for simultaneous users
-
----
-
-## License
-
-You can add a license here (MIT, Apache, GPL, etc.).

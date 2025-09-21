@@ -1,0 +1,21 @@
+# Compiled files
+*.exe
+*.out
+*.o
+*.obj
+
+# CMake build folders
+/build
+/cmake-build-*
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+# IDE files
+*.idea/
+*.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

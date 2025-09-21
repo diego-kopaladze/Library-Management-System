@@ -12,8 +12,6 @@ A simple C++ library management system. You can manage books and users, borrow &
 * [Requirements](#requirements)
 * [Building](#building)
 * [Usage](#usage)
-* [Future Improvements](#future-improvements)
-* [License](#license)
 
 ---
 
@@ -21,7 +19,6 @@ A simple C++ library management system. You can manage books and users, borrow &
 
 This project implements a basic Library Management System in **C++** using object-oriented design. It defines classes for `Book`, `User`, and `Library`, and includes a `main.cpp` for interaction. The build is managed via **CMake**.
 
-It’s good for learning how to structure such systems, manage relationships between classes, and basic operations like add/remove/search of books/users, borrowing, returning etc.
 
 ---
 
@@ -44,8 +41,10 @@ Here’s what the main files do:
 | `Book.h` / `Book.cpp`       | Definition of the `Book` class: book metadata, status (available or borrowed), etc.                   |
 | `User.h` / `User.cpp`       | Definition of `User` class: user details, maybe list of borrowed books etc.                           |
 | `Library.h` / `Library.cpp` | Central class managing the collections of `Book` and `User`, handling borrow/return and interactions. |
-| `main.cpp`                  | Entry point / user interface (console) to drive the system.                                           |
+| `Menu/menu.hpp`             | Console UI: menu display and user interaction logic, calls `Library` methods.                         |
+| `main.cpp`                  | Entry point: calls `run()` from `Menu`.                                                               |
 | `CMakeLists.txt`            | Build script for compiling & linking the source files.                                                |
+
 
 ---
 

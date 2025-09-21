@@ -4,9 +4,10 @@ project(LibraryManagementSystem)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(LibraryManagementSystem main.cpp
-        Book.cpp
-        Book.h
-        Library.cpp
-        Library.h
-        User.cpp
-        User.h)
+        Book/Book.cpp
+        Book/Book.h
+        Library/Library.cpp
+        Library/Library.h
+        User/User.cpp
+        User/User.h
+        Menu/menu.hpp)

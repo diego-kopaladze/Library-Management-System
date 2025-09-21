@@ -2,8 +2,8 @@
 #define LIBRARY_H
 
 #include <vector>
-#include "Book.h"
-#include "User.h"
+#include "../Book/Book.h"
+#include "../User/User.h"
 
 class Library {
 private:
